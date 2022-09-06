@@ -4,10 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script>
-
-    
-$(window).on("orientationchange", function( event ) {
- alert( "This device is in " + event.orientation + " mode!");
+$(document).on("pagecreate",function(){
     screen.orientation.addEventListener("change", function (e) {
     let portrait = window.matchMedia("(orientation: portrait)");
 
@@ -19,6 +16,10 @@ $(window).on("orientationchange", function( event ) {
         }
     });
 });
+});
+    
+$(window).on("orientationchange", function( event ) {
+ alert( "This device is in " + event.orientation + " mode!");  
 });
 
 </script>
